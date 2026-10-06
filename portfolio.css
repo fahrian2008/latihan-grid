@@ -1,0 +1,98 @@
+/* Mobile First */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family: Arial, sans-serif;
+    line-height:1.6;
+    background:#f4f4f4;
+}
+
+/* Header */
+
+header{
+    background:#333;
+    color:white;
+    padding:20px;
+}
+
+header h1{
+    text-align:center;
+    margin-bottom:10px;
+}
+
+/* Flexbox Navigation */
+
+nav ul{
+    list-style:none;
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+nav a:hover{
+    color:yellow;
+}
+
+/* Section */
+
+section{
+    padding:30px;
+}
+
+h2{
+    margin-bottom:15px;
+}
+
+/* CSS Grid */
+
+.grid-container{
+    display:grid;
+    grid-template-columns:1fr; /* Mobile = 1 kolom */
+    gap:20px;
+}
+
+.card{
+    background:white;
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0 2px 5px rgba(0,0,0,0.2);
+    text-align:center;
+}
+
+/* Tablet = 2 kolom */
+
+@media (min-width: 768px){
+    .grid-container{
+        grid-template-columns:repeat(2, 1fr);
+    }
+}
+
+/* Desktop = 3 kolom */
+
+@media (min-width: 1024px){
+    .grid-container{
+        grid-template-columns:repeat(3, 1fr);
+    }
+}
+
+/* Footer */
+
+footer{
+    background:#333;
+    color:white;
+    text-align:center;
+    padding:20px;
+    margin-top:20px;
+}
